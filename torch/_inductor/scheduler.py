@@ -654,8 +654,8 @@ class Scheduler:
                     name_to_users[node1_name] = name_to_users[node2_name]
 
         def rename(n):
-            if n in self.mutation_renames:
-                return rename(self.mutation_renames[n])
+            # if n in self.mutation_renames:
+            # return rename(self.mutation_renames[n])
             return n
 
         def dep_closure(node_name):
@@ -1118,7 +1118,6 @@ class Scheduler:
                 ):
                     self.flush()
                     self.current_device = device
-
             self.buffer_names_to_free.update(node.last_usage)
 
             if node.is_template():
